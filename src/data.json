@@ -1,61 +1,57 @@
 {
   "greeting": {
-    "title": "장세모 \uD83D\uDC8D 황네모\n결혼합니다!",
-    "message": "저희 결혼합니다.\n\n서로에게 알맞은 온도로 따뜻하던 우리.\n부부로서 첫걸음을 내딛는 그 설렘의 순간에\n소중한 분들을 초대합니다.",
+    "title": "모성종 ♡ 이승애 \n결혼합니다!",
+    "message": "서로를 차곡차곡 쌓아 온 두 사람\n함께하는 열한 번째 여름의 시작, 결혼합니다.\n내리쬐는 랫볕에는 서로의 나무가 되어\n갑작스러운 비에는 서로의 우산이 되어\n푸르른 생을 꾸려가겠습니다.\n\n한 곳을 바라보며\n첫발을 떼는 자리에 참석하시어\n기쁨의 자리를 축복으로 더욱\n빛내 주시길 바랍니다.",
     "host": {
       "groom": {
-        "name": "세모",
-        "relation": "아들",
+        "name": "성종",
+        "relation": "장남",
         "parents": [
           {
             "relation": "아버지",
-            "name": "장아빠"
+            "name": "모귀덕"
           },
           {
             "relation": "어머니",
-            "name": "이엄마"
+            "name": "이미화"
           }
         ]
       },
       "bride": {
-        "name": "네모",
+        "name": "승애",
         "relation": "딸",
         "parents": [
           {
-            "relation": "아버지",
-            "name": "황아빠"
-          },
-          {
             "relation": "어머니",
-            "name": "이엄마"
+            "name": "김분숙"
           }
         ]
       }
     },
-    "eventDetail": "2024년 2월 17일 (토) 14:00\n아펠가모 공덕 라로브홀"
+    "eventDetail": "2025년 6월 21일 (토) 오후 4시 20분\n천호 라비니움 블룸홀"
   },
   "hostInfo": [
     {
       "host": "신랑측",
       "accountInfo": [
         {
-          "name": "장세모",
+          "name": "모성종",
           "relation": "신랑",
-          "bank": "카카오뱅크",
-          "account": "1234-56-789012",
+          "bank": "국민은행",
+          "account": "821102-04-092565",
           "kakaopayAccount": "",
           "tossAccount": ""
         },
         {
-          "name": "장아빠",
+          "name": "모귀덕",
           "relation": "아버지",
           "bank": "농협",
           "account": "123-45-678901"
         },
         {
-          "name": "이엄마",
+          "name": "이미화",
           "relation": "어머니",
-          "bank": "농협",
+          "bank": "국민은행",
           "account": "123-45-678901"
         }
       ]
@@ -64,32 +60,26 @@
       "host": "신부측",
       "accountInfo": [
         {
-          "name": "황네모",
+          "name": "이승애",
           "relation": "신부",
-          "bank": "토스뱅크",
+          "bank": "하나은행",
           "account": "1234-5678-9012",
           "kakaopayAccount": "",
           "tossAccount": ""
         },
         {
-          "name": "황아빠",
-          "relation": "아버지",
-          "bank": "농협",
-          "account": "123-45-678901"
-        },
-        {
-          "name": "이엄마",
+          "name": "김분숙",
           "relation": "어머니",
-          "bank": "농협",
+          "bank": "하나은행",
           "account": "123-45-678901"
         }
       ]
     }
   ],
   "mapInfo": {
-    "address1": "아펠가모 공덕 라로브홀",
-    "address2": "서울 마포구 마포대로 92\n효성해링턴스퀘어 B동 7층\n02-2197-0230",
-    "naverMap": "https://map.naver.com/p/directions/-/14132311.1099497,4514956.9078363,%EC%95%84%ED%8E%A0%EA%B0%80%EB%AA%A8%20%EA%B3%B5%EB%8D%95,1929913788,PLACE_POI/-/transit?c=15.00,0,0,0,dh",
+    "address1": "천호 라비니움 블룸홀",
+    "address2": "서울 송파구 천호대로 996 라비니움 4층\n02-472-7004",
+    "naverMap": "https://map.naver.com/p/directions/-/14151205.8346639,4514430.7924274,%EB%9D%BC%EB%B9%84%EB%8B%88%EC%9B%80,1485729416,PLACE_POI/-/transit?c=18.07,0,0,0,dh",
     "kakaoMap": "https://map.kakao.com/?map_type=TYPE_MAP&target=car&rt=,,489503,1123003&rt1=&rt2=%EC%95%84%ED%8E%A0%EA%B0%80%EB%AA%A8%20%EA%B3%B5%EB%8D%95%EC%A0%90&rtIds=,630786038",
     "lat": 37.54222,
     "lon": 126.952708
@@ -97,28 +87,12 @@
   "locationInfo": [
     {
       "title": "\uD83D\uDCCD 지하철",
-      "desc": "\uD83D\uDC49\uD83C\uDFFB 5·6호선 공덕역 7번 출구 (도보 2분)\n\uD83D\uDC49\uD83C\uDFFB 경의·중앙선, 공항철도 공덕역 10번 출구 (도보 30초)"
+      "desc": "\uD83D\uDC49\uD83C\uDFFB 5·8호선 천호역 10번 출구 (도보 10초)"
     },
     {
       "title": "\uD83D\uDCCD 주차안내",
       "desc": "\uD83D\uDC49\uD83C\uDFFB 건물 내 3-5층 2시간 무료주차\n(안내데스크에서 주차권 수령)"
     }
   ],
-  "emojis": [
-    "❤️",
-    "💛",
-    "💌",
-    "🥹",
-    "🥳",
-    "👰🏻‍",
-    "🤵🏻‍️",
-    "🤍",
-    "✨",
-    "💍",
-    "💒",
-    "💕",
-    "😍",
-    "🔔",
-    "💘"
-  ]
+  "emojis": ["❤️", "💛", "💌", "🥹", "🥳", "👰🏻‍", "🤵🏻‍️", "🤍", "✨", "💍", "💒", "💕", "😍", "🔔", "💘"]
 }

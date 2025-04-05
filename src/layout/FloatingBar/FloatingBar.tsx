@@ -1,13 +1,13 @@
 // import { useEffect, useState } from 'react';
-import styled from '@emotion/styled';
-import data from 'data.json';
+import styled from "@emotion/styled";
+import data from "data.json";
 // import { increment, onValue, ref, update } from 'firebase/database';
 // import { realtimeDb } from 'firebase.ts';
-import JSConfetti from 'js-confetti';
-import Heart from '@/assets/icons/heart_plus.svg?react';
-import Share from '@/assets/icons/share.svg?react';
-import Upward from '@/assets/icons/upward.svg?react';
-import Button from '@/components/Button.tsx';
+import JSConfetti from "js-confetti";
+import Heart from "@/assets/icons/heart_plus.svg?react";
+import Share from "@/assets/icons/share.svg?react";
+import Upward from "@/assets/icons/upward.svg?react";
+import Button from "@/components/Button.tsx";
 
 const FloatingBar = ({ isVisible }: { isVisible: boolean }) => {
   const { emojis } = data;
@@ -26,10 +26,10 @@ const FloatingBar = ({ isVisible }: { isVisible: boolean }) => {
   const handleCopy = () => {
     navigator.clipboard.writeText(window.location.href).then(
       () => {
-        alert('주소가 복사되었습니다.😉😉');
+        alert("주소가 복사되었습니다.😉😉");
       },
       () => {
-        alert('주소 복사에 실패했습니다.🥲🥲');
+        alert("주소 복사에 실패했습니다.🥲🥲");
       },
     );
   };
@@ -46,7 +46,7 @@ const FloatingBar = ({ isVisible }: { isVisible: boolean }) => {
 
   const jsConfetti = new JSConfetti();
   const handleScroll = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
@@ -78,5 +78,5 @@ const Nav = styled.nav<{ isVisible: boolean }>`
   align-items: center;
   justify-content: center;
   gap: 5px;
-  display: ${(props) => (props.isVisible ? 'flex' : 'none')};
+  display: ${(props) => (props.isVisible ? "flex" : "none")};
 `;

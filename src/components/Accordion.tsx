@@ -1,6 +1,6 @@
-import { ReactNode, useState } from 'react';
-import styled from '@emotion/styled';
-import ExpandMore from '@/assets/icons/expand_more.svg?react';
+import { ReactNode, useState } from "react";
+import styled from "@emotion/styled";
+import ExpandMore from "@/assets/icons/expand_more.svg?react";
 
 interface IAccordionProps {
   title: string;
@@ -31,7 +31,7 @@ const Accordion = ({ title, children }: IAccordionProps) => {
 export default Accordion;
 
 const AccordionWrapper = styled.div`
-  font-family: HSSanTokki20-Regular, serif;
+  // font-family: HSSanTokki20-Regular, serif;
   border: 1px solid #e6ece1;
   margin-bottom: 20px;
   border-radius: 8px;
@@ -55,7 +55,7 @@ const AccordionHeader = styled.div<{ isActive: boolean }>`
     justify-content: center;
     user-select: none;
     transition: all 0.3s ease;
-    transform: ${(props) => (props.isActive ? 'rotate(180deg)' : undefined)};
+    transform: ${(props) => (props.isActive ? "rotate(180deg)" : undefined)};
   }
 `;
 

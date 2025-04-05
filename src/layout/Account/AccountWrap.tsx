@@ -1,7 +1,7 @@
-import styled from '@emotion/styled';
-import Copy from '@/assets/icons/copy.svg?react';
-import kakaopay from '@/assets/icons/kakaopay.png?url';
-import toss from '@/assets/icons/toss.png?url';
+import styled from "@emotion/styled";
+import Copy from "@/assets/icons/copy.svg?react";
+import kakaopay from "@/assets/icons/kakaopay.png?url";
+import toss from "@/assets/icons/toss.png?url";
 
 interface IAccountProps {
   name: string;
@@ -11,21 +11,14 @@ interface IAccountProps {
   kakaopayAccount?: string;
   tossAccount?: string;
 }
-const AccountWrap = ({
-  name,
-  relation,
-  bank,
-  account,
-  kakaopayAccount,
-  tossAccount,
-}: IAccountProps) => {
+const AccountWrap = ({ name, relation, bank, account, kakaopayAccount, tossAccount }: IAccountProps) => {
   const handleCopy = () => {
     navigator.clipboard.writeText(account).then(
       () => {
-        alert('계좌번호가 복사되었습니다.😉😉');
+        alert("계좌번호가 복사되었습니다.😉😉");
       },
       () => {
-        alert('계좌번호 복사에 실패했습니다.🥲🥲');
+        alert("계좌번호 복사에 실패했습니다.🥲🥲");
       },
     );
   };
@@ -61,7 +54,7 @@ const AccountWrap = ({
 };
 
 const Wrapper = styled.div`
-  font-family: 'SUITE-Regular';
+  // font-family: "SUITE-Regular";
   padding: 10px 0;
   border-bottom: 1px solid #dfdfdf;
   &:last-of-type {
@@ -83,7 +76,7 @@ const Relation = styled.span`
   color: #44484d;
 `;
 const Name = styled.span`
-  font-size: 1rem
+  font-size: 1rem;
 `;
 
 const Details = styled.div`
@@ -127,7 +120,7 @@ const AccountButton = styled.button`
   outline: none;
   box-shadow: none;
   background: white;
-`.withComponent('a');
+`.withComponent("a");
 
 const KakaopayImg = styled.img`
   width: 50px;

@@ -1,28 +1,33 @@
-import { Gallery, Item } from 'react-photoswipe-gallery';
-import 'photoswipe/style.css';
-import images from '@/layout/Gallery/Images.ts';
+import { Gallery, Item } from "react-photoswipe-gallery";
+import "photoswipe/style.css";
+import images from "@/layout/Gallery/Images.ts";
 
 const PhotoGallery = () => {
   const smallItemStyles: React.CSSProperties = {
-    cursor: 'pointer',
-    objectFit: 'contain',
-    width: '100px',
-    height: '150px',
+    cursor: "pointer",
+    objectFit: "contain",
+    width: "100px",
+    height: "150px",
   };
 
   return (
-    <Gallery>
+    <Gallery
+      options={{
+        zoom: false,
+        wheelToZoom: false,
+        pinchToClose: false,
+      }}>
       <div
         style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(3, 0fr)',
+          display: "grid",
+          gridTemplateColumns: "repeat(3, 0fr)",
           gridGap: 2,
         }}>
         {images.map((image, index) => {
           return (
             <Item
               key={index}
-              cropped
+              // cropped
               original={image.source}
               thumbnail={image.source}
               width={image.width}

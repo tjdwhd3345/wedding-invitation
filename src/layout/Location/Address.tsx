@@ -1,7 +1,7 @@
-import styled from '@emotion/styled';
-import data from 'data.json';
-import { Caption, PointTitle } from '@/components/Text.tsx';
-import { ILocationInfo } from '@/types/data.ts';
+import styled from "@emotion/styled";
+import data from "data.json";
+import { Caption, PointTitle } from "@/components/Text.tsx";
+import { ILocationInfo } from "@/types/data.ts";
 
 const Address = () => {
   const { locationInfo } = data;

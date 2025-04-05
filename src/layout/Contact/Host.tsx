@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from '@emotion/styled';
-import data from 'data.json';
-import { BrideAndGroom } from '@/types/data.ts';
+import React from "react";
+import styled from "@emotion/styled";
+import data from "data.json";
+import { BrideAndGroom } from "@/types/data.ts";
 
 const Host = () => {
   const { groom, bride } = data.greeting.host;
@@ -24,7 +24,7 @@ const HostInfo = ({ person }: { person: BrideAndGroom }) => {
         <>
           {person.parents.map((parent, index) => (
             <React.Fragment key={index}>
-              {index > 0 && ' · '}
+              {index > 0 && " · "}
               {parent.name}
             </React.Fragment>
           ))}
@@ -48,7 +48,7 @@ const HighlightedName = styled.span`
 
 const HostContainer = styled.div`
   gap: 8px;
-  font-family: HSSanTokki20-Regular, serif;
+  // font-family: HSSanTokki20-Regular, serif;
 `;
 
 const HostDetails = styled.div`
