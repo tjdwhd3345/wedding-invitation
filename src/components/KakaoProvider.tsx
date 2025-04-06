@@ -26,7 +26,6 @@ const KakaoProvider = (props: Props) => {
 
   useEffect(() => {
     if (!window.Kakao.isInitialized()) {
-      console.log(window.Kakao);
       window.Kakao.init(KAKAOTALK_API_KEY); // 사용하려는 앱의 JavaScript 키 입력
     }
   }, []);

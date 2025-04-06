@@ -80,9 +80,9 @@
     "address1": "천호 라비니움 블룸홀",
     "address2": "서울 송파구 천호대로 996 라비니움 4층\n02-472-7004",
     "naverMap": "https://map.naver.com/p/directions/-/14151205.8346639,4514430.7924274,%EB%9D%BC%EB%B9%84%EB%8B%88%EC%9B%80,1485729416,PLACE_POI/-/transit?c=18.07,0,0,0,dh",
-    "kakaoMap": "https://map.kakao.com/?map_type=TYPE_MAP&target=car&rt=,,489503,1123003&rt1=&rt2=%EC%95%84%ED%8E%A0%EA%B0%80%EB%AA%A8%20%EA%B3%B5%EB%8D%95%EC%A0%90&rtIds=,630786038",
-    "lat": 37.54222,
-    "lon": 126.952708
+    "kakaoMap": "https://map.kakao.com/?map_type=TYPE_MAP&target=car&rt=%2C%2C527049%2C1121952&rt1=&rt2=%EC%B2%9C%ED%98%B8+%EB%9D%BC%EB%B9%84%EB%8B%88%EC%9B%80&rtIds=%2C&rtTypes=%2C",
+    "lat": 37.538468,
+    "lon": 127.122419
   },
   "locationInfo": [
     {
