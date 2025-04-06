@@ -55,7 +55,6 @@ const FloatingBar = ({ isVisible }: { isVisible: boolean }) => {
   useEffect(() => {
     if (window.Kakao.isInitialized() && shareRef.current) {
       // TODO: 썸네일 이미지 변경
-      // TODO: URL 설정
       window.Kakao.Share.createDefaultButton({
         container: `#${shareRef.current.id}`,
         objectType: "location",
@@ -64,19 +63,18 @@ const FloatingBar = ({ isVisible }: { isVisible: boolean }) => {
         content: {
           title: "모성종 ♡ 이승애 결혼합니다",
           description: "2025년 6월 21일 (토) 오후 4시 20분",
-          imageUrl: "http://k.kakaocdn.net/dn/bSbH9w/btqgegaEDfW/vD9KKV0hEintg6bZT4v4WK/kakaolink40_original.png",
-          // imageUrl: "http://localhost:5173/01.jpg",
+          imageUrl: "https://wedding-invitation-smoky-seven.vercel.app/thumbnail.png",
           link: {
-            mobileWebUrl: "https://developers.kakao.com",
-            webUrl: "https://developers.kakao.com",
+            mobileWebUrl: "https://wedding-invitation-smoky-seven.vercel.app/",
+            webUrl: "https://wedding-invitation-smoky-seven.vercel.app/",
           },
         },
         buttons: [
           {
             title: "청첩장 보기",
             link: {
-              mobileWebUrl: "https://developers.kakao.com",
-              webUrl: "https://developers.kakao.com",
+              mobileWebUrl: "https://wedding-invitation-smoky-seven.vercel.app/",
+              webUrl: "https://wedding-invitation-smoky-seven.vercel.app/",
             },
           },
         ],
