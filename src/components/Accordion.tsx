@@ -15,7 +15,7 @@ const Accordion = ({ title, children }: IAccordionProps) => {
 
   return (
     <AccordionWrapper>
-      <AccordionHeader isActive={isOpen} onClick={toggleAccordion}>
+      <AccordionHeader $isActive={isOpen} onClick={toggleAccordion}>
         <p>{title}</p>
 
         <span>
@@ -23,7 +23,7 @@ const Accordion = ({ title, children }: IAccordionProps) => {
         </span>
       </AccordionHeader>
 
-      {isOpen && <AccordionContent>{children}</AccordionContent>}
+      <AccordionContent $isOpen={isOpen}>{children}</AccordionContent>
     </AccordionWrapper>
   );
 };
@@ -39,29 +39,33 @@ const AccordionWrapper = styled.div`
   transition: all 0.3s ease;
 `;
 
-const AccordionHeader = styled.div<{ isActive: boolean }>`
+const AccordionHeader = styled.div<{ $isActive: boolean }>`
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: #e6ece1;
-  padding: 0 15px;
+  padding: 8px 16px;
   cursor: pointer;
+
   & > p {
     color: #44484d;
   }
+
   & > span {
     display: flex;
     align-items: center;
     justify-content: center;
     user-select: none;
     transition: all 0.3s ease;
-    transform: ${(props) => (props.isActive ? "rotate(180deg)" : undefined)};
+    transform: ${(props) => (props.$isActive ? "rotate(180deg)" : undefined)};
   }
 `;
 
-const AccordionContent = styled.div`
+const AccordionContent = styled.div<{ $isOpen: boolean }>`
   font-size: 14px;
   text-align: justify;
-  padding: 10px 20px;
+
   background-color: #ffffff;
+  max-height: ${(props) => (props.$isOpen ? "500px" : "0px")};
+  transition: max-height 0.8s ease;
 `;

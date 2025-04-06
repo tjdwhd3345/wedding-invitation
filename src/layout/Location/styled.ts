@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
-export const LocationWrapper = styled.div`
-  width: 90%;
+export const Wrapper = styled.div`
   display: flex;
+  gap: 8px;
   flex-direction: column;
+  width: 90%;
 `;

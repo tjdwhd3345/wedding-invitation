@@ -1,10 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import { NavermapsProvider } from "react-naver-maps";
-import { Heading1 } from "@/components/Text.tsx";
+import * as Text from "@/components/Text.tsx";
 import KakaoProvider from "@/components/KakaoProvider";
-import Wrapper from "@/components/Wrapper.tsx";
+import * as Layout from "@/layout/index";
 import Account from "@/layout/Account/Account.tsx";
-import Container from "@/layout/Container.tsx";
 import FloatingBar from "@/layout/FloatingBar/FloatingBar.tsx";
 import GalleryWrap from "@/layout/Gallery/GalleryWrap.tsx";
 import Guestbook from "@/layout/Guestbook/Guestbook.tsx";
@@ -36,32 +35,32 @@ function App() {
   return (
     <NavermapsProvider ncpClientId={ncpClientId}>
       <KakaoProvider>
-        <Container>
-          <Wrapper>
+        <Layout.Container>
+          <Layout.Wrapper>
             <Main />
-          </Wrapper>
-          <Wrapper>
-            <Heading1>모시는 글</Heading1>
+          </Layout.Wrapper>
+          <Layout.Wrapper>
+            <Text.Heading1>모시는 글</Text.Heading1>
             <Invitation />
-          </Wrapper>
-          <Wrapper ref={galleryRef}>
-            <Heading1>Gallery</Heading1>
+          </Layout.Wrapper>
+          <Layout.Wrapper ref={galleryRef}>
+            <Text.Heading1>Gallery</Text.Heading1>
             <GalleryWrap />
-          </Wrapper>
-          <Wrapper>
-            <Heading1>마음 전하실 곳</Heading1>
+          </Layout.Wrapper>
+          <Layout.Wrapper>
+            <Text.Heading1>마음 전하실 곳</Text.Heading1>
             <Account />
-          </Wrapper>
-          <Wrapper>
-            <Heading1>오시는 길</Heading1>
+          </Layout.Wrapper>
+          <Layout.Wrapper>
+            <Text.Heading1>오시는 길</Text.Heading1>
             <Location />
-          </Wrapper>
-          <Wrapper>
-            <Heading1>신랑 신부에게</Heading1>
+          </Layout.Wrapper>
+          <Layout.Wrapper>
+            <Text.Heading1>신랑 신부에게</Text.Heading1>
             <Guestbook />
-          </Wrapper>
+          </Layout.Wrapper>
           <FloatingBar isVisible={isVisible} />
-        </Container>
+        </Layout.Container>
       </KakaoProvider>
     </NavermapsProvider>
   );

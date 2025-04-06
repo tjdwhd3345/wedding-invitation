@@ -25,6 +25,8 @@ body {
   min-width: 280px;
   background-color: #e0e7d9;
 
+  touch-action: pan-y;
+
   height: 100%;
   width: 100%;
 }
@@ -48,5 +50,19 @@ body {
   font-family: "JejuMyeongjoOTF";
   src: url("/fonts/JejuMyeongjoOTF.otf") format("opentype");
   font-weight: 45 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Eulyoo1945";
+  src: url("/fonts/Eulyoo1945-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Eulyoo1945";
+  src: url("/fonts/Eulyoo1945-SemiBold.woff2") format("woff2");
+  font-weight: 600;
   font-style: normal;
 }

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 10px 0;
+  padding: 12px 18px;
   border-bottom: 1px solid #dfdfdf;
 
   &:last-of-type {
@@ -17,13 +17,13 @@ export const Info = styled.div`
   align-items: center;
   gap: 6px;
   height: inherit;
-  margin: 5px 0;
+  // margin: 5px 0;
 `;
 export const Relation = styled.span`
   color: #44484d;
 `;
 export const Name = styled.span`
-  font-size: 1rem;
+  font-size: 16px;
 `;
 
 export const Details = styled.div`
@@ -56,9 +56,9 @@ export const AccountButton = styled.a`
   border: 1px solid #dfdfdf;
   border-radius: 5px;
   margin: 5px 0;
-  padding: 0 0.8em;
+  padding: 0 12px;
   width: inherit;
-  font-size: 0.7rem;
+  font-size: 12px;
   cursor: pointer;
   gap: 2px;
   color: #1a1a1a;

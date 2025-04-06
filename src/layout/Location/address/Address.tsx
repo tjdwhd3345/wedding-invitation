@@ -1,5 +1,5 @@
 import data from "data.json";
-import { Caption, PointTitle } from "@/components/Text.tsx";
+import * as Text from "@/components/Text.tsx";
 import { ILocationInfo } from "@/types/data.ts";
 import * as Styled from "./styled.ts";
 
@@ -11,8 +11,8 @@ const Address = () => {
         const { title, desc } = item;
         return (
           <Styled.Way key={title}>
-            <PointTitle>{title}</PointTitle>
-            <Caption>{desc}</Caption>
+            <Text.PointTitle>{title}</Text.PointTitle>
+            <Text.Caption>{desc}</Text.Caption>
           </Styled.Way>
         );
       })}

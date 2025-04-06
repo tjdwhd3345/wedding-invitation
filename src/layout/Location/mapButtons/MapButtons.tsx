@@ -8,16 +8,16 @@ const MapButtons = () => {
   const { naverMap, kakaoMap } = data.mapInfo;
 
   return (
-    <Styled.MapButtonWrapper>
-      <Button onClick={() => window.open(naverMap)}>
+    <Styled.Wrapper>
+      <Button onClick={() => window.open(naverMap)} style={{ fontSize: 14 }}>
         <img src={navermapicon} alt="naver map icon" style={{ width: 24 }} />
         네이버 지도
       </Button>
-      <Button onClick={() => window.open(kakaoMap)}>
+      <Button onClick={() => window.open(kakaoMap)} style={{ fontSize: 14 }}>
         <img src={kakaomapicon} alt="kakao map icon" style={{ width: 24 }} />
         카카오맵
       </Button>
-    </Styled.MapButtonWrapper>
+    </Styled.Wrapper>
   );
 };
 

@@ -4,23 +4,26 @@ import toss from "@/assets/icons/toss.png?url";
 import * as Styled from "./styled.ts";
 
 interface IAccountProps {
-  name: string;
-  relation: string;
-  bank: string;
-  account: string;
-  kakaopayAccount?: string;
-  tossAccount?: string;
+  account: {
+    name: string;
+    relation: string;
+    bank: string;
+    account: string;
+    kakaopayAccount?: string;
+    tossAccount?: string;
+  };
 }
-const AccountWrap = ({ name, relation, bank, account, kakaopayAccount, tossAccount }: IAccountProps) => {
+const AccountWrap = (props: IAccountProps) => {
+  const { name, relation, bank, account, kakaopayAccount, tossAccount } = props.account;
   const handleCopy = () => {
-    navigator.clipboard.writeText(account).then(
-      () => {
-        alert("계좌번호가 복사되었습니다.😉😉");
-      },
-      () => {
-        alert("계좌번호 복사에 실패했습니다.🥲🥲");
-      },
-    );
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(account).then(
+        () => alert("계좌번호가 복사되었습니다.😉😉"),
+        () => alert("계좌번호 복사에 실패했습니다.🥲🥲"),
+      );
+    } else {
+      alert("계좌번호 복사에 실패했습니다.🥲🥲");
+    }
   };
 
   return (

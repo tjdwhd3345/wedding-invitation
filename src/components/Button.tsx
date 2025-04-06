@@ -4,12 +4,12 @@ const Button = styled.a`
   display: flex;
   align-items: center;
   gap: 4px;
-  padding: 0.5em 0.8em;
+  padding: 8px 12px;
   border-radius: 8px;
   border: 1px solid #dfdfdf;
   outline: none;
   box-shadow: none;
-  font-size: 0.9rem;
+  font-size: 16px;
   cursor: pointer;
   background: white;
   color: #1a1a1a;

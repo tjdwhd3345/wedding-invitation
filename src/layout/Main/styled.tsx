@@ -15,7 +15,6 @@ export const MainImg = styled.img`
 `;
 
 export const MainTitle = styled.p`
-  // font-family: HSSanTokki20-Regular, serif;
   font-size: 24px;
   line-height: 150%;
   color: #2f2120;
@@ -23,7 +22,7 @@ export const MainTitle = styled.p`
 `;
 
 export const SubTitle = styled.p`
-  font-size: 1.1rem;
+  font-size: 18px;
   color: #2f2120;
   line-height: 140%;
   white-space: pre-line;

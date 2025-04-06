@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 const RoundButton = styled.a`
-  padding: 0.5em 1em;
+  padding: 8px 16px;
   border-radius: 20px;
   outline: none;
   box-shadow: none;
-  font-size: 0.9rem;
+  font-size: 16px;
   cursor: pointer;
   color: #44484d;
   text-decoration: none;

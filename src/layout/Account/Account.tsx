@@ -7,25 +7,13 @@ const Account = () => {
   const { hostInfo } = data;
   return (
     <HostInfoWrapper>
-      {hostInfo.map((host) => {
-        return (
-          <Accordion title={host.host} key={host.host}>
-            {host.accountInfo.map((account) => {
-              return (
-                <AccountWrap
-                  key={account.name}
-                  name={account.name}
-                  relation={account.relation}
-                  bank={account.bank}
-                  account={account.account}
-                  kakaopayAccount={account.kakaopayAccount}
-                  tossAccount={account.tossAccount}
-                />
-              );
-            })}
-          </Accordion>
-        );
-      })}
+      {hostInfo.map((host, i) => (
+        <Accordion title={host.host} key={i}>
+          {host.accountInfo.map((account, j) => (
+            <AccountWrap key={j} account={account} />
+          ))}
+        </Accordion>
+      ))}
     </HostInfoWrapper>
   );
 };
@@ -34,7 +22,9 @@ export default Account;
 
 const HostInfoWrapper = styled.div`
   display: flex;
-  width: 90%;
   flex-direction: column;
-  padding: 20px;
+  gap: 24px;
+  width: 90%;
+  width: 100%;
+  // padding: 20px;
 `;

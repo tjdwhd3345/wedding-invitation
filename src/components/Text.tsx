@@ -16,19 +16,18 @@ export const Heading2 = styled.p`
 `;
 
 export const PointTitle = styled.p`
-  line-height: 1;
-  margin: 0;
+  line-height: 150%;
   color: #e88ca6;
   white-space: pre-line;
 `;
 
 export const Paragraph = styled.p`
-  line-height: 2.2rem;
+  line-height: 32px;
   white-space: pre-line;
 `;
 
-export const Caption = styled.p<{ textAlign?: string }>`
+export const Caption = styled.p<{ $textAlign?: string }>`
   font-weight: 200;
-  text-align: ${(props) => (props.textAlign ? props.textAlign : "start")};
+  text-align: ${(props) => (props.$textAlign ? props.$textAlign : "start")};
   white-space: pre-line;
 `;

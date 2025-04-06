@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-export const MapButtonWrapper = styled.div`
-  margin: 8px;
+export const Wrapper = styled.div`
+  // margin: 8px;
   display: flex;
-  gap: 8px;
   justify-content: center;
+  gap: 8px;
 `;

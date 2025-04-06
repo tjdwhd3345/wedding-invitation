@@ -83,7 +83,7 @@ const FloatingBar = ({ isVisible }: { isVisible: boolean }) => {
   }, [window.Kakao.isInitialized(), shareRef.current]);
 
   return (
-    <Styled.Nav isVisible={isVisible}>
+    <Styled.Nav $isVisible={isVisible}>
       <Button onClick={handleCount}>
         <Heart fill="#e88ca6" />
         {/*{count || ''}*/}

@@ -15,13 +15,14 @@ const PhotoGallery = () => {
       options={{
         zoom: false,
         wheelToZoom: false,
-        pinchToClose: false,
+        // pinchToClose: false,
+        maxZoomLevel: 1,
       }}>
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(3, 0fr)",
-          gridGap: 2,
+          gridTemplateColumns: "repeat(3, 1fr)",
+          gridGap: 6,
         }}>
         {images.map((image, index) => {
           return (
