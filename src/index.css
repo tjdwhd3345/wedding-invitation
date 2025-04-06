@@ -21,7 +21,7 @@ body {
 
 @font-face {
   font-family: "JejuGothicOTF";
-  src: url("/fonts/JejuGothic.otf") format("opentype");
+  src: url("/fonts/JejuGothicOTF.otf") format("opentype");
   font-weight: 45 900;
   font-style: normal;
 }

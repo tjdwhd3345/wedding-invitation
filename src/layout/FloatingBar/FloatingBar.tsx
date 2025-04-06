@@ -1,5 +1,4 @@
-// import { useEffect, useState } from 'react';
-import styled from "@emotion/styled";
+import { useEffect, useRef } from "react";
 import data from "data.json";
 // import { increment, onValue, ref, update } from 'firebase/database';
 // import { realtimeDb } from 'firebase.ts';
@@ -8,9 +7,14 @@ import Heart from "@/assets/icons/heart_plus.svg?react";
 import Share from "@/assets/icons/share.svg?react";
 import Upward from "@/assets/icons/upward.svg?react";
 import Button from "@/components/Button.tsx";
+import * as Styled from "./styled.ts";
+
+const jsConfetti = new JSConfetti();
 
 const FloatingBar = ({ isVisible }: { isVisible: boolean }) => {
   const { emojis } = data;
+
+  const shareRef = useRef<HTMLAnchorElement>(null);
 
   // TODO: count 기능 사용 원할시 firebase realtime db 연결!
   // const [count, setCount] = useState(0);
@@ -24,18 +28,18 @@ const FloatingBar = ({ isVisible }: { isVisible: boolean }) => {
   // }, []);
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(window.location.href).then(
-      () => {
-        alert("주소가 복사되었습니다.😉😉");
-      },
-      () => {
-        alert("주소 복사에 실패했습니다.🥲🥲");
-      },
-    );
+    // navigator.clipboard.writeText(window.location.href).then(
+    //   () => {
+    //     alert("주소가 복사되었습니다.😉😉");
+    //   },
+    //   () => {
+    //     alert("주소 복사에 실패했습니다.🥲🥲");
+    //   },
+    // );
   };
 
   const handleCount = () => {
-    void jsConfetti.addConfetti({ emojis });
+    jsConfetti.addConfetti({ emojis });
 
     // 버튼 클릭시 likes 수 증가
     // const dbRef = ref(realtimeDb);
@@ -44,18 +48,49 @@ const FloatingBar = ({ isVisible }: { isVisible: boolean }) => {
     // });
   };
 
-  const jsConfetti = new JSConfetti();
   const handleScroll = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  useEffect(() => {
+    if (window.Kakao.isInitialized() && shareRef.current) {
+      // TODO: 썸네일 이미지 변경
+      // TODO: URL 설정
+      window.Kakao.Share.createDefaultButton({
+        container: `#${shareRef.current.id}`,
+        objectType: "location",
+        address: "서울 송파구 천호대로 996 라비니움",
+        addressTitle: "천호 라비니움, 4층 블룸홀",
+        content: {
+          title: "모성종 ♡ 이승애 결혼합니다",
+          description: "2025년 6월 21일 (토) 오후 4시 20분",
+          imageUrl: "http://k.kakaocdn.net/dn/bSbH9w/btqgegaEDfW/vD9KKV0hEintg6bZT4v4WK/kakaolink40_original.png",
+          // imageUrl: "http://localhost:5173/01.jpg",
+          link: {
+            mobileWebUrl: "https://developers.kakao.com",
+            webUrl: "https://developers.kakao.com",
+          },
+        },
+        buttons: [
+          {
+            title: "청첩장 보기",
+            link: {
+              mobileWebUrl: "https://developers.kakao.com",
+              webUrl: "https://developers.kakao.com",
+            },
+          },
+        ],
+      });
+    }
+  }, []);
+
   return (
-    <Nav isVisible={isVisible}>
+    <Styled.Nav isVisible={isVisible}>
       <Button onClick={handleCount}>
         <Heart fill="#e88ca6" />
         {/*{count || ''}*/}
       </Button>
-      <Button onClick={handleCopy}>
+      <Button onClick={handleCopy} id="kakaotalk-sharing-btn" ref={shareRef}>
         <Share fill="#e88ca6" />
         공유
       </Button>
@@ -63,20 +98,8 @@ const FloatingBar = ({ isVisible }: { isVisible: boolean }) => {
         <Upward fill="#e88ca6" />
         위로
       </Button>
-    </Nav>
+    </Styled.Nav>
   );
 };
 
 export default FloatingBar;
-
-const Nav = styled.nav<{ isVisible: boolean }>`
-  min-width: 280px;
-  position: fixed;
-  bottom: 30px;
-  left: 0;
-  right: 0;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-  display: ${(props) => (props.isVisible ? "flex" : "none")};
-`;
