@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { NavermapsProvider } from "react-naver-maps";
 import { Heading1 } from "@/components/Text.tsx";
+import KakaoProvider from "@/components/KakaoProvider";
 import Wrapper from "@/components/Wrapper.tsx";
 import Account from "@/layout/Account/Account.tsx";
 import Container from "@/layout/Container.tsx";
@@ -28,42 +29,40 @@ function App() {
       const { offsetTop } = galleryRef.current;
       const scrollPosition = window.scrollY;
 
-      if (scrollPosition >= offsetTop) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
+      setIsVisible(scrollPosition >= offsetTop);
     }
   };
 
   return (
     <NavermapsProvider ncpClientId={ncpClientId}>
-      <Container>
-        <Wrapper>
-          <Main />
-        </Wrapper>
-        <Wrapper>
-          <Heading1>모시는 글</Heading1>
-          <Invitation />
-        </Wrapper>
-        <Wrapper ref={galleryRef}>
-          <Heading1>Gallery</Heading1>
-          <GalleryWrap />
-        </Wrapper>
-        <Wrapper>
-          <Heading1>마음 전하실 곳</Heading1>
-          <Account />
-        </Wrapper>
-        <Wrapper>
-          <Heading1>오시는 길</Heading1>
-          <Location />
-        </Wrapper>
-        <Wrapper>
-          <Heading1>신랑 신부에게</Heading1>
-          <Guestbook />
-        </Wrapper>
-        <FloatingBar isVisible={isVisible} />
-      </Container>
+      <KakaoProvider>
+        <Container>
+          <Wrapper>
+            <Main />
+          </Wrapper>
+          <Wrapper>
+            <Heading1>모시는 글</Heading1>
+            <Invitation />
+          </Wrapper>
+          <Wrapper ref={galleryRef}>
+            <Heading1>Gallery</Heading1>
+            <GalleryWrap />
+          </Wrapper>
+          <Wrapper>
+            <Heading1>마음 전하실 곳</Heading1>
+            <Account />
+          </Wrapper>
+          <Wrapper>
+            <Heading1>오시는 길</Heading1>
+            <Location />
+          </Wrapper>
+          <Wrapper>
+            <Heading1>신랑 신부에게</Heading1>
+            <Guestbook />
+          </Wrapper>
+          <FloatingBar isVisible={isVisible} />
+        </Container>
+      </KakaoProvider>
     </NavermapsProvider>
   );
 }
