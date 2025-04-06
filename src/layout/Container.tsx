@@ -1,4 +1,4 @@
-import styled from "@emotion/styled";
+import styled from "styled-components";
 
 const Container = styled.div`
   border: 30px solid transparent; /* 테두리의 초기 값 설정 */
@@ -9,8 +9,8 @@ const Container = styled.div`
   width: 85vw;
   margin: 0 auto;
 
-  @media screen and (min-width: 500px) {
-    width: 500px;
+  @media screen and (min-width: 560px) {
+    width: 560px;
   }
 `;
 export default Container;

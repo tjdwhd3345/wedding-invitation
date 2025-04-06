@@ -1,6 +1,6 @@
-import styled from "@emotion/styled";
+import styled from "styled-components";
 
-const Button = styled.button`
+const Button = styled.a`
   display: flex;
   align-items: center;
   gap: 4px;
@@ -14,6 +14,6 @@ const Button = styled.button`
   background: white;
   color: #1a1a1a;
   text-decoration: none;
-`.withComponent("a");
+`;
 
 export default Button;

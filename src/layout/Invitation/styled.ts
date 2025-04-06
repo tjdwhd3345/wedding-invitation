@@ -1,4 +1,4 @@
-import styled from "@emotion/styled";
+import styled from "styled-components";
 
 export const InvitationWrapper = styled.div`
   display: flex;

@@ -1,5 +1,5 @@
 import { ReactNode, useState } from "react";
-import styled from "@emotion/styled";
+import styled from "styled-components";
 import ExpandMore from "@/assets/icons/expand_more.svg?react";
 
 interface IAccordionProps {

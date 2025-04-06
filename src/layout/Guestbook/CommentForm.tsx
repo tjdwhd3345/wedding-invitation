@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styled from "@emotion/styled";
+import styled from "styled-components";
 // import { push, ref, serverTimestamp } from 'firebase/database';
 // import { realtimeDb } from '../../firebase.ts';
 

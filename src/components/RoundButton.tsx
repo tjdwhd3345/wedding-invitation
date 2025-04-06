@@ -1,6 +1,6 @@
-import styled from "@emotion/styled";
+import styled from "styled-components";
 
-const RoundButton = styled.button`
+const RoundButton = styled.a`
   padding: 0.5em 1em;
   border-radius: 20px;
   outline: none;
@@ -10,6 +10,6 @@ const RoundButton = styled.button`
   color: #44484d;
   text-decoration: none;
   background-color: #e6ece1;
-`.withComponent("a");
+`;
 
 export default RoundButton;

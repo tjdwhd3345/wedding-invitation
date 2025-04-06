@@ -1,4 +1,4 @@
-import styled from "@emotion/styled";
+import styled from "styled-components";
 import CommentForm from "./CommentForm.tsx";
 import { Heading2 } from "@/components/Text.tsx";
 

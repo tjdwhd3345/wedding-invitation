@@ -18,20 +18,20 @@ function App() {
   const galleryRef = useRef(null);
 
   useEffect(() => {
+    const checkScrollPosition = () => {
+      if (galleryRef.current) {
+        const { offsetTop } = galleryRef.current;
+        const scrollPosition = window.scrollY;
+
+        setIsVisible(scrollPosition >= offsetTop);
+      }
+    };
+
     window.addEventListener("scroll", checkScrollPosition);
     return () => {
       window.removeEventListener("scroll", checkScrollPosition);
     };
   }, []);
-
-  const checkScrollPosition = () => {
-    if (galleryRef.current) {
-      const { offsetTop } = galleryRef.current;
-      const scrollPosition = window.scrollY;
-
-      setIsVisible(scrollPosition >= offsetTop);
-    }
-  };
 
   return (
     <NavermapsProvider ncpClientId={ncpClientId}>
