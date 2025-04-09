@@ -63,7 +63,7 @@ const FloatingBar = ({ isVisible }: { isVisible: boolean }) => {
         content: {
           title: "모성종 ♡ 이승애 결혼합니다",
           description: "2025년 6월 21일 (토) 오후 4시 20분",
-          imageUrl: "https://wedding-invitation-smoky-seven.vercel.app/thumbnail.png",
+          imageUrl: "https://wedding-invitation-smoky-seven.vercel.app/thumbnail.jpg",
           link: {
             mobileWebUrl: "https://wedding-invitation-smoky-seven.vercel.app/",
             webUrl: "https://wedding-invitation-smoky-seven.vercel.app/",
