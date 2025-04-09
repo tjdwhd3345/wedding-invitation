@@ -9,7 +9,7 @@ import image08 from "@/assets/images/08.jpg";
 import image09 from "@/assets/images/09.jpg";
 import image10 from "@/assets/images/10.jpg";
 import image11 from "@/assets/images/11.jpg";
-// import image12 from "@/assets/images/12.jpg";
+import image12 from "@/assets/images/12.jpg";
 
 const images = [
   /* 이미지 경로를 리스트로 저장 */
@@ -79,12 +79,12 @@ const images = [
     width: 640,
     height: 960,
   },
-  // {
-  //   alt: "image12",
-  //   source: image12,
-  //   width: 640,
-  //   height: 960,
-  // },
+  {
+    alt: "image12",
+    source: image12,
+    width: 640,
+    height: 960,
+  },
 ];
 
 export default images;
