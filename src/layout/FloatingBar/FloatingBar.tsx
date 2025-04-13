@@ -54,7 +54,6 @@ const FloatingBar = ({ isVisible }: { isVisible: boolean }) => {
 
   useEffect(() => {
     if (window.Kakao.isInitialized() && shareRef.current) {
-      // TODO: 썸네일 이미지 변경
       window.Kakao.Share.createDefaultButton({
         container: `#${shareRef.current.id}`,
         objectType: "location",

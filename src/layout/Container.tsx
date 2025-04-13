@@ -8,6 +8,10 @@ const Container = styled.div`
   background-color: #ffffff;
   width: 100vw;
 
+  & > section:last-of-type {
+    margin-bottom: 56px; /* 마지막 섹션에만 margin-bottom 적용 */
+  }
+
   @media screen and (min-width: 560px) {
     width: 560px;
   }

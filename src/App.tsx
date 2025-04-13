@@ -55,10 +55,10 @@ function App() {
             <Text.Heading1>오시는 길</Text.Heading1>
             <Location />
           </Layout.Wrapper>
-          <Layout.Wrapper>
+          {/* <Layout.Wrapper>
             <Text.Heading1>신랑 신부에게</Text.Heading1>
             <Guestbook />
-          </Layout.Wrapper>
+          </Layout.Wrapper> */}
           <FloatingBar isVisible={isVisible} />
         </Layout.Container>
       </KakaoProvider>
