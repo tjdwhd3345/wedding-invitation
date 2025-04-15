@@ -26,4 +26,5 @@ export const SubTitle = styled.p`
   color: #2f2120;
   line-height: 140%;
   white-space: pre-line;
+  letter-spacing: -0.2px;
 `;

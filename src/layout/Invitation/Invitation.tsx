@@ -9,8 +9,6 @@ const Invitation = () => {
     <Styled.InvitationWrapper>
       <Text.Paragraph>{greeting.message}</Text.Paragraph>
       <Host />
-      <Text.Caption $textAlign={"center"}>{greeting.eventDetail}</Text.Caption>
-      {/* TODO: 달력 UI 추가 */}
     </Styled.InvitationWrapper>
   );
 };

@@ -5,10 +5,10 @@ import * as Styled from "./styled.ts";
 const Host = () => {
   const { groom, bride } = data.greeting.host;
   return (
-    <Styled.HostContainer>
+    <Styled.Container>
       <HostInfo person={groom} />
       <HostInfo person={bride} />
-    </Styled.HostContainer>
+    </Styled.Container>
   );
 };
 
@@ -19,13 +19,13 @@ const HostInfo = ({ person }: { person: BrideAndGroom }) => {
 
   const parents = person.parents.map((parent) => parent.name)?.join(" · ") || "";
   return (
-    <Styled.HostDetails>
+    <Styled.Details>
       {parents}
       <Styled.RelationText>
         <span>의</span>
         <Styled.Relation>{relation}</Styled.Relation>
       </Styled.RelationText>
       <Styled.HighlightedName>{name}</Styled.HighlightedName>
-    </Styled.HostDetails>
+    </Styled.Details>
   );
 };

@@ -7,11 +7,11 @@ export const HighlightedName = styled.span`
   color: #4f4f4f;
 `;
 
-export const HostContainer = styled.div`
+export const Container = styled.div`
   gap: 8px;
 `;
 
-export const HostDetails = styled.div`
+export const Details = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
