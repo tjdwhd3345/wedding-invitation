@@ -13,10 +13,10 @@ const PhotoGallery = () => {
   return (
     <Gallery
       options={{
-        zoom: false,
-        wheelToZoom: false,
-        // pinchToClose: false,
-        maxZoomLevel: 1,
+        zoom: false, // 확대 비활성화
+        wheelToZoom: false, // 마우스 휠 확대 비활성화
+        maxZoomLevel: 1, // 최대 확대 레벨을 1로 설정
+        doubleTapAction: false,
       }}>
       <div
         style={{
@@ -39,7 +39,10 @@ const PhotoGallery = () => {
                   alt={image.alt}
                   src={image.source}
                   ref={ref as React.MutableRefObject<HTMLImageElement>}
-                  onClick={open}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    open(e);
+                  }}
                 />
               )}
             </Item>
