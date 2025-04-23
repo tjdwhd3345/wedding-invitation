@@ -1,24 +1,27 @@
-import styled from "styled-components";
+import { useState } from "react";
 import * as Text from "@/components/Text.tsx";
-import CommentForm from "./CommentForm.tsx";
+import CommentForm from "./form/CommentForm.tsx";
+import RecentComments from "./recent/RecentComments.tsx";
+import Comments from "./list/Comments.tsx";
+import * as Styled from "./styled.ts";
 
 const Guestbook = () => {
+  const [showList, setShowList] = useState(false);
+  const [showForm, setShowForm] = useState(false);
+
   return (
-    <GuestBookWrapper>
-      <Text.Heading2>
-        메시지를 남겨주세요.
-        <br />
-        결혼식 하루 뒤, 신랑 신부에게 전달됩니다.
-      </Text.Heading2>
-      <CommentForm />
-    </GuestBookWrapper>
+    <Styled.Wrapper>
+      <Text.Heading2>축하의 메시지를 남겨주세요.</Text.Heading2>
+      <Styled.Container>
+        <Styled.Button onClick={() => setShowList(true)}>전체보기</Styled.Button>
+        <Styled.Button onClick={() => setShowForm(true)}>작성하기</Styled.Button>
+      </Styled.Container>
+
+      <RecentComments />
+      {showForm && <CommentForm closeHandler={() => setShowForm(false)} />}
+      {showList && <Comments closeHandler={() => setShowList(false)} />}
+    </Styled.Wrapper>
   );
 };
 
 export default Guestbook;
-
-const GuestBookWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-`;

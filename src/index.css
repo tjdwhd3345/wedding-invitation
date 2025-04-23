@@ -40,9 +40,16 @@ body {
 }
 
 @font-face {
-  font-family: "JejuGothicOTF";
-  src: url("/fonts/JejuGothicOTF.otf") format("opentype");
-  font-weight: 45 900;
+  font-family: "Eulyoo1945";
+  src: url("/fonts/Eulyoo1945-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Eulyoo1945";
+  src: url("/fonts/Eulyoo1945-SemiBold.woff2") format("woff2");
+  font-weight: 600;
   font-style: normal;
 }
 
@@ -54,15 +61,8 @@ body {
 }
 
 @font-face {
-  font-family: "Eulyoo1945";
-  src: url("/fonts/Eulyoo1945-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Eulyoo1945";
-  src: url("/fonts/Eulyoo1945-SemiBold.woff2") format("woff2");
-  font-weight: 600;
+  font-family: "JejuGothicOTF";
+  src: url("/fonts/JejuGothicOTF.otf") format("opentype");
+  font-weight: 45 900;
   font-style: normal;
 }

@@ -22,7 +22,9 @@ export const PointTitle = styled.p`
 `;
 
 export const Paragraph = styled.p`
+  font-size: 16px;
   line-height: 32px;
+  letter-spacing: -0.5px;
   white-space: pre-line;
 `;
 
