@@ -13,7 +13,10 @@ const Delete = (props: Props) => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (password === import.meta.env.VITE_APP_DELETE_PASSWORD) {
+    if (
+      password === import.meta.env.VITE_APP_DELETE_PASSWORD1 ||
+      password === import.meta.env.VITE_APP_DELETE_PASSWORD2
+    ) {
       if (comment) {
         handleDelete(comment);
         closeHandler();
