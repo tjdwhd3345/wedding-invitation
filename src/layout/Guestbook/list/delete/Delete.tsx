@@ -1,17 +1,23 @@
 import { useState } from "react";
 import * as Styled from "./styled";
+import { Comment } from "@/components/Firebase";
 
 interface Props {
   closeHandler: () => void;
+  comment: Comment | null;
+  handleDelete: (comment: Comment) => void;
 }
 const Delete = (props: Props) => {
-  const { closeHandler } = props;
+  const { closeHandler, comment, handleDelete } = props;
   const [password, setPassword] = useState("");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (password === import.meta.env.VITE_APP_DELETE_PASSWORD) {
-      closeHandler();
+      if (comment) {
+        handleDelete(comment);
+        closeHandler();
+      }
     } else {
       alert("방명록 비밀번호를 확인해주세요!");
     }
@@ -24,7 +30,7 @@ const Delete = (props: Props) => {
       <Styled.Wrapper>
         <Styled.Subject>
           <Styled.Title>방명록 삭제하기</Styled.Title>
-          <Styled.CloseIcon>X</Styled.CloseIcon>
+          <Styled.CloseIcon onClick={closeHandler}>X</Styled.CloseIcon>
         </Styled.Subject>
         <Styled.Form onSubmit={handleSubmit}>
           <Styled.Input

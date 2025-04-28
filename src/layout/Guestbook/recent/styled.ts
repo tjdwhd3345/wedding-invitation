@@ -50,3 +50,20 @@ export const Message = styled.span`
   word-wrap: break-word;
   text-align: left;
 `;
+
+export const NoDataContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #dfdfdf;
+  background-color: #ffffff;
+`;
+
+export const NoDataText = styled.span`
+  font-size: 14px;
+  line-height: 150%;
+  color: #868686;
+`;

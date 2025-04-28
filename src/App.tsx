@@ -15,14 +15,13 @@ import Calendar from "./layout/Calendar/Calendar";
 function App() {
   const ncpClientId = import.meta.env.VITE_APP_NAVERMAPS_CLIENT_ID;
   const [isVisible, setIsVisible] = useState(false);
-  const galleryRef = useRef(null);
+  const scrollRef = useRef(null);
 
   useEffect(() => {
     const checkScrollPosition = () => {
-      if (galleryRef.current) {
-        const { offsetTop } = galleryRef.current;
+      if (scrollRef.current) {
+        const { offsetTop } = scrollRef.current;
         const scrollPosition = window.scrollY;
-
         setIsVisible(scrollPosition >= offsetTop);
       }
     };
@@ -40,7 +39,7 @@ function App() {
           <Layout.Wrapper>
             <Main />
           </Layout.Wrapper>
-          <Layout.Wrapper>
+          <Layout.Wrapper ref={scrollRef}>
             <Text.Heading1>모시는 글</Text.Heading1>
             <Invitation />
           </Layout.Wrapper>
@@ -48,7 +47,7 @@ function App() {
             <Text.Heading1>Calendar</Text.Heading1>
             <Calendar />
           </Layout.Wrapper>
-          <Layout.Wrapper ref={galleryRef}>
+          <Layout.Wrapper>
             <Text.Heading1>Gallery</Text.Heading1>
             <GalleryWrap />
           </Layout.Wrapper>

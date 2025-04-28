@@ -34,7 +34,8 @@ const AccountWrap = (props: IAccountProps) => {
       </Styled.Info>
       <Styled.Details>
         <Styled.AccountInfo>
-          {bank} {account}
+          <span>{bank}</span>
+          <span>{account}</span>
         </Styled.AccountInfo>
         <Styled.CopyButton onClick={handleCopy}>
           <Copy fill="#dfdfdf" />

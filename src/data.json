@@ -45,14 +45,14 @@
         {
           "name": "모귀덕",
           "relation": "아버지",
-          "bank": "농협",
-          "account": "123-45-678901"
+          "bank": "국민은행",
+          "account": "8211-02-04-082773"
         },
         {
           "name": "이미화",
           "relation": "어머니",
           "bank": "국민은행",
-          "account": "123-45-678901"
+          "account": "82121-0643896"
         }
       ]
     },
@@ -63,15 +63,15 @@
           "name": "이승애",
           "relation": "신부",
           "bank": "하나은행",
-          "account": "1234-5678-9012",
+          "account": "129-910362-71907",
           "kakaopayAccount": "",
           "tossAccount": ""
         },
         {
           "name": "김분숙",
           "relation": "어머니",
-          "bank": "하나은행",
-          "account": "123-45-678901"
+          "bank": "기업은행",
+          "account": "132-051970-01-018"
         }
       ]
     }

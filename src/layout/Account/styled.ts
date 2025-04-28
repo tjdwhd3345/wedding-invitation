@@ -32,7 +32,12 @@ export const Details = styled.div`
   justify-content: space-between;
 `;
 
-export const AccountInfo = styled.div``;
+export const AccountInfo = styled.div`
+  display: flex;
+  align-items: center;
+  jusitfy-content: flex-start;
+  gap: 8px;
+`;
 export const CopyButton = styled.button`
   border: none;
   border-radius: 5px;

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Firebase from "@/components/Firebase";
-import { formatDate } from "../function.ts";
+import * as Text from "@/components/Text";
+// import { formatDate } from "../function.ts";
 import * as Styled from "./styled.ts";
 
 type Comment = {
@@ -25,19 +26,25 @@ const RecentComments = () => {
     fetchComments();
 
     return () => {
-      Firebase.unsubscribe && Firebase.unsubscribe();
+      Firebase.unsubscribeComments && Firebase.unsubscribeComments();
     };
   }, []);
   return (
     <Styled.Container>
-      {comments.map((coment, index) => (
-        <Styled.Wrapper key={index}>
-          <Styled.Title>
-            <Styled.From>FROM. {coment.name}</Styled.From>
-          </Styled.Title>
-          <Styled.Message>{coment.message}</Styled.Message>
-        </Styled.Wrapper>
-      ))}
+      {comments.length > 0 ? (
+        comments.map((coment, index) => (
+          <Styled.Wrapper key={index}>
+            <Styled.Title>
+              <Styled.From>FROM. {coment.name}</Styled.From>
+            </Styled.Title>
+            <Styled.Message>{coment.message}</Styled.Message>
+          </Styled.Wrapper>
+        ))
+      ) : (
+        <Styled.NoDataContainer>
+          <Styled.NoDataText>첫 번째 축하글을 남겨주세요!</Styled.NoDataText>
+        </Styled.NoDataContainer>
+      )}
     </Styled.Container>
   );
 };

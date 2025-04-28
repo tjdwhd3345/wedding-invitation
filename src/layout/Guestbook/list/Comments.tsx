@@ -11,6 +11,7 @@ const Comments = (props: Props) => {
   const { closeHandler } = props;
   const [comments, setComments] = useState<Comment[]>([]);
   const [showDelete, setShowDelete] = useState(false);
+  const [deleteComment, setDeleteComment] = useState<Comment | null>(null);
 
   const fetchComments = async () => {
     try {
@@ -42,20 +43,41 @@ const Comments = (props: Props) => {
         <Styled.CloseIcon onClick={closeHandler}>X</Styled.CloseIcon>
       </Styled.Subject>
       <Styled.Container>
-        {comments.map((comment, index) => (
-          <Styled.Wrapper key={index}>
-            <Styled.Title>
-              <Styled.From>FROM. {comment.name}</Styled.From>
-              <Styled.Delete>
-                <Styled.Date>{formatDate(comment.createdAt)}</Styled.Date>
-                <Styled.DeleteIcon onClick={() => setShowDelete(true)}>X</Styled.DeleteIcon>
-              </Styled.Delete>
-            </Styled.Title>
-            <Styled.Message>{comment.message}</Styled.Message>
-          </Styled.Wrapper>
-        ))}
+        {comments.length > 0 ? (
+          comments.map((comment, index) => (
+            <Styled.Wrapper key={index}>
+              <Styled.Title>
+                <Styled.From>FROM. {comment.name}</Styled.From>
+                <Styled.Delete>
+                  <Styled.Date>{formatDate(comment.createdAt)}</Styled.Date>
+                  <Styled.DeleteIcon
+                    onClick={() => {
+                      setShowDelete(true);
+                      setDeleteComment(comment);
+                    }}>
+                    X
+                  </Styled.DeleteIcon>
+                </Styled.Delete>
+              </Styled.Title>
+              <Styled.Message>{comment.message}</Styled.Message>
+            </Styled.Wrapper>
+          ))
+        ) : (
+          <Styled.NoDataContainer>
+            <Styled.NoDataText>첫 번째 축하글을 남겨주세요!</Styled.NoDataText>
+          </Styled.NoDataContainer>
+        )}
       </Styled.Container>
-      {showDelete && <Delete closeHandler={() => setShowDelete(false)} />}
+      {showDelete && (
+        <Delete
+          closeHandler={() => {
+            setShowDelete(false);
+            setDeleteComment(null);
+          }}
+          comment={deleteComment}
+          handleDelete={handleDelete}
+        />
+      )}
     </Styled.Modal>
   );
 };
