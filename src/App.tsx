@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { NavermapsProvider } from "react-naver-maps";
+import { Analytics } from "@vercel/analytics/react";
 import * as Text from "@/components/Text.tsx";
 import KakaoProvider from "@/components/KakaoProvider";
 import * as Layout from "@/layout/index";
@@ -33,40 +34,43 @@ function App() {
   }, []);
 
   return (
-    <NavermapsProvider ncpClientId={ncpClientId}>
-      <KakaoProvider>
-        <Layout.Container>
-          <Layout.Wrapper>
-            <Main />
-          </Layout.Wrapper>
-          <Layout.Wrapper ref={scrollRef}>
-            <Text.Heading1>모시는 글</Text.Heading1>
-            <Invitation />
-          </Layout.Wrapper>
-          <Layout.Wrapper>
-            <Text.Heading1>Calendar</Text.Heading1>
-            <Calendar />
-          </Layout.Wrapper>
-          <Layout.Wrapper>
-            <Text.Heading1>Gallery</Text.Heading1>
-            <GalleryWrap />
-          </Layout.Wrapper>
-          <Layout.Wrapper>
-            <Text.Heading1>마음 전하실 곳</Text.Heading1>
-            <Account />
-          </Layout.Wrapper>
-          <Layout.Wrapper>
-            <Text.Heading1>오시는 길</Text.Heading1>
-            <Location />
-          </Layout.Wrapper>
-          <Layout.Wrapper>
-            <Text.Heading1>신랑 신부에게</Text.Heading1>
-            <Guestbook />
-          </Layout.Wrapper>
-          <FloatingBar isVisible={isVisible} />
-        </Layout.Container>
-      </KakaoProvider>
-    </NavermapsProvider>
+    <>
+      <NavermapsProvider ncpClientId={ncpClientId}>
+        <KakaoProvider>
+          <Layout.Container>
+            <Layout.Wrapper>
+              <Main />
+            </Layout.Wrapper>
+            <Layout.Wrapper ref={scrollRef}>
+              <Text.Heading1>모시는 글</Text.Heading1>
+              <Invitation />
+            </Layout.Wrapper>
+            <Layout.Wrapper>
+              <Text.Heading1>Calendar</Text.Heading1>
+              <Calendar />
+            </Layout.Wrapper>
+            <Layout.Wrapper>
+              <Text.Heading1>Gallery</Text.Heading1>
+              <GalleryWrap />
+            </Layout.Wrapper>
+            <Layout.Wrapper>
+              <Text.Heading1>마음 전하실 곳</Text.Heading1>
+              <Account />
+            </Layout.Wrapper>
+            <Layout.Wrapper>
+              <Text.Heading1>오시는 길</Text.Heading1>
+              <Location />
+            </Layout.Wrapper>
+            <Layout.Wrapper>
+              <Text.Heading1>신랑 신부에게</Text.Heading1>
+              <Guestbook />
+            </Layout.Wrapper>
+            <FloatingBar isVisible={isVisible} />
+          </Layout.Container>
+        </KakaoProvider>
+      </NavermapsProvider>
+      <Analytics />
+    </>
   );
 }
 
