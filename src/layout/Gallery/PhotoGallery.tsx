@@ -1,6 +1,7 @@
 import { Gallery, Item } from "react-photoswipe-gallery";
 import "photoswipe/style.css";
 import images from "@/layout/Gallery/Images.ts";
+import "./PhotoGallery.css";
 
 const PhotoGallery = () => {
   const smallItemStyles: React.CSSProperties = {
@@ -15,7 +16,7 @@ const PhotoGallery = () => {
       options={{
         zoom: false, // 확대 비활성화
         wheelToZoom: false, // 마우스 휠 확대 비활성화
-        maxZoomLevel: 1, // 최대 확대 레벨을 1로 설정
+        maxZoomLevel: 4, // 최대 확대 레벨을 4로 설정
         doubleTapAction: false,
       }}>
       <div
@@ -28,7 +29,6 @@ const PhotoGallery = () => {
           return (
             <Item
               key={index}
-              // cropped
               original={image.source}
               thumbnail={image.source}
               width={image.width}

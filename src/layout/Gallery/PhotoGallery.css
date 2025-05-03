@@ -1,0 +1,3 @@
+.pswp .pswp__scroll-wrap .pswp__container .pswp__item .pswp__img {
+  pointer-events: none;
+}
