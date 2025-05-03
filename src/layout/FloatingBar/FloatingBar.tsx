@@ -4,8 +4,8 @@ import JSConfetti from "js-confetti";
 import Heart from "@/assets/icons/heart_plus.svg?react";
 import Share from "@/assets/icons/share.svg?react";
 import Upward from "@/assets/icons/upward.svg?react";
+import { Firebase } from "@/components/Firebase";
 import Button from "@/components/Button.tsx";
-import Firebase from "@/components/Firebase.ts";
 import * as Styled from "./styled.ts";
 
 const jsConfetti = new JSConfetti();
@@ -18,12 +18,13 @@ const FloatingBar = ({ isVisible }: { isVisible: boolean }) => {
   const displayCount = count > 999 ? "999+" : `${count}`;
 
   useEffect(() => {
-    Firebase.getLikeCounts((count) => {
+    Firebase.db.getLikeCounts((count) => {
       setCount(count);
     });
   }, []);
 
   const handleCopy = () => {
+    Firebase.analytics.logEvent();
     // navigator.clipboard.writeText(window.location.href).then(
     //   () => {
     //     alert("주소가 복사되었습니다.😉😉");
@@ -38,7 +39,7 @@ const FloatingBar = ({ isVisible }: { isVisible: boolean }) => {
     jsConfetti.addConfetti({ emojis });
 
     try {
-      await Firebase.increaseLike();
+      await Firebase.db.increaseLike();
     } catch (e) {
       console.error("an error occured in increaseLike", { e });
     }

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Firebase from "@/components/Firebase.ts";
+import { Firebase } from "@/components/Firebase";
 import * as Styled from "./styled.ts";
 
 interface Props {
@@ -18,7 +18,7 @@ const CommentForm = (props: Props) => {
       alert("이름과 메시지를 채워주세요. 🥹");
     } else {
       try {
-        await Firebase.addComment({ name, message });
+        await Firebase.db.addComment({ name, message });
         setName("");
         setMessage("");
         alert("메시지를 등록했습니다. 💌");

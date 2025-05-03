@@ -13,19 +13,12 @@ import {
   updateDoc,
   increment,
 } from "firebase/firestore";
-import { db } from "../firebase";
+import { db } from "../../../firebase";
 
 const isProduction = import.meta.env.MODE === "production";
 const COLLECTION_NAME = isProduction ? "prod" : "test-collection";
 
-export type Comment = {
-  id: string;
-  name: string;
-  message: string;
-  createdAt: number;
-};
-
-class Firebase {
+class DatabaseImpl {
   private commentColRef;
   private likeRef;
   public unsubscribeComments: Unsubscribe | null = null;
@@ -105,4 +98,4 @@ class Firebase {
   }
 }
 
-export default new Firebase();
+export default DatabaseImpl;

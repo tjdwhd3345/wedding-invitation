@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import Firebase, { Comment } from "@/components/Firebase";
+import { Firebase } from "@/components/Firebase";
+import { Comment } from "@/components/Firebase";
 import { formatDate } from "../function.ts";
 import * as Styled from "./styled.ts";
 import Delete from "./delete/Delete.tsx";
@@ -15,7 +16,7 @@ const Comments = (props: Props) => {
 
   const fetchComments = async () => {
     try {
-      const comments = await Firebase.getAllComments();
+      const comments = await Firebase.db.getAllComments();
       setComments(comments);
     } catch (error) {
       console.error("Error fetching comments:", error);
@@ -28,7 +29,7 @@ const Comments = (props: Props) => {
 
   const handleDelete = async (comment: Comment) => {
     try {
-      await Firebase.deleteComment(comment);
+      await Firebase.db.deleteComment(comment);
       fetchComments();
     } catch (e) {
       console.error("Error deleteComment", e);

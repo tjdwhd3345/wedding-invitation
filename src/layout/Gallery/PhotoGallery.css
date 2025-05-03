@@ -1,3 +1,13 @@
 .pswp .pswp__scroll-wrap .pswp__container .pswp__item .pswp__img {
   pointer-events: none;
 }
+
+.pswp__scroll-wrap,
+.pswp__bg,
+.pswp__container,
+.pswp__item,
+.pswp__content,
+.pswp__img,
+.pswp__zoom-wrap {
+  position: fixed;
+}

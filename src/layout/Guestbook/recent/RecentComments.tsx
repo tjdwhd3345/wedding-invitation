@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
-import Firebase from "@/components/Firebase";
-import * as Text from "@/components/Text";
-// import { formatDate } from "../function.ts";
+import { Firebase } from "@/components/Firebase";
 import * as Styled from "./styled.ts";
 
 type Comment = {
@@ -15,7 +13,7 @@ const RecentComments = () => {
   useEffect(() => {
     const fetchComments = async () => {
       try {
-        await Firebase.getRecentComments((comments) => {
+        await Firebase.db.getRecentComments((comments) => {
           setComments(comments);
         });
       } catch (error) {
@@ -26,7 +24,7 @@ const RecentComments = () => {
     fetchComments();
 
     return () => {
-      Firebase.unsubscribeComments && Firebase.unsubscribeComments();
+      Firebase.db.unsubscribeComments && Firebase.db.unsubscribeComments();
     };
   }, []);
   return (
