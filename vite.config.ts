@@ -13,15 +13,15 @@ export default defineConfig({
     ViteImageOptimizer({
       png: {
         // https://sharp.pixelplumbing.com/api-output#png
-        quality: 30,
+        quality: 75,
       },
       jpeg: {
         // https://sharp.pixelplumbing.com/api-output#jpeg
-        quality: 30,
+        quality: 75,
       },
       jpg: {
         // https://sharp.pixelplumbing.com/api-output#jpeg
-        quality: 30,
+        quality: 75,
       },
     }),
   ],
