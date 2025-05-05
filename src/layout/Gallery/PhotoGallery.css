@@ -1,13 +1,8 @@
-.pswp .pswp__scroll-wrap .pswp__container .pswp__item .pswp__img {
-  pointer-events: none;
+.gallery {
+  width: 100%;
 }
 
-.pswp__scroll-wrap,
-.pswp__bg,
-.pswp__container,
-.pswp__item,
-.pswp__content,
-.pswp__img,
-.pswp__zoom-wrap {
-  position: fixed;
+:root {
+  --swiper-navigation-color: #000;
+  --swiper-navigation-size: 24px;
 }

@@ -37,12 +37,12 @@ const images = [
     width: 320,
     height: 480,
   },
-  {
-    alt: "image05",
-    source: image05,
-    width: 320,
-    height: 480,
-  },
+  // {
+  //   alt: "image05",
+  //   source: image05,
+  //   width: 320,
+  //   height: 480,
+  // },
   {
     alt: "image06",
     source: image06,

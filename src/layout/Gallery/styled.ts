@@ -4,16 +4,15 @@ export const ContentsWrap = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
   margin: 24px 0;
   overflow: hidden;
 `;
 
-export const ImageMoreWrap = styled.div<{ $isMoreView: boolean }>`
+export const ImageMoreWrap = styled.div`
   position: relative;
-  max-height: ${(props) =>
-    props.$isMoreView
-      ? ""
-      : "60vh"}; /* isMoreView 상태가 true일 때는 높이 제한 없이, false일 때는 195px로 작게 보이도록 */
+  width: 100%;
+
   overflow: hidden;
 `;
 
@@ -33,4 +32,8 @@ export const PlusButton = styled.div`
   border-radius: 8px;
   border: 1px solid #dfdfdf;
   cursor: pointer;
+`;
+
+export const GalleryContainer = styled.div`
+  width: 100%;
 `;
