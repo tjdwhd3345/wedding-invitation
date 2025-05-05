@@ -10,9 +10,8 @@ const PhotoGallery = () => {
   return (
     <Styled.GalleryContainer>
       {images.map((image, index) => (
-        <div
+        <Styled.Thumbnail
           key={index}
-          style={{ display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer" }}
           onClick={() => {
             setImageShow(true);
             setImageId(index);
@@ -22,7 +21,7 @@ const PhotoGallery = () => {
             alt={`Image ${index + 1}`}
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
           />
-        </div>
+        </Styled.Thumbnail>
       ))}
       {imageShow && <Di_Gallery index={imageId} closeHandler={() => setImageShow(false)} />}
     </Styled.GalleryContainer>

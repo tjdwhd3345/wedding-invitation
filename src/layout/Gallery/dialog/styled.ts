@@ -25,7 +25,7 @@ export const GalleryNavbar = styled.div`
   position: relative;
   width: 100%;
   max-width: 480px;
-  height: 36px;
+  height: 40px;
   background-color: #fff;
 `;
 
@@ -33,6 +33,7 @@ export const GalleryContainer = styled.div`
   width: 100%;
   max-width: 480px;
   background-color: #fff;
+  padding: 8px;
 `;
 
 export const CloseIcon = styled.button`

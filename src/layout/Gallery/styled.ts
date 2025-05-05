@@ -15,27 +15,18 @@ export const ImageMoreWrap = styled.div`
   overflow: hidden;
 `;
 
-export const WhiteGradientOverlay = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 90%);
-`;
-
-export const PlusButton = styled.div`
-  width: 100%;
-  padding: 6px 12px;
-  font-size: 16px;
-  border-radius: 8px;
-  border: 1px solid #dfdfdf;
-  cursor: pointer;
-`;
-
 export const GalleryContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(3, minmax(88px, auto));
   grid-gap: 6px;
   width: 100%;
+`;
+
+export const Thumbnail = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 6px;
+  overflow: hidden;
 `;
