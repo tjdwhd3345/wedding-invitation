@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Firebase } from "@/components/Firebase";
+import Close from "@/assets/icons/close.svg?react";
 import * as Styled from "./styled.ts";
 
 interface Props {
@@ -35,7 +36,9 @@ const CommentForm = (props: Props) => {
       <Styled.Wrapper>
         <Styled.Subject>
           방명록 작성하기
-          <Styled.CloseIcon onClick={closeHandler}>X</Styled.CloseIcon>
+          <Styled.CloseIcon onClick={closeHandler}>
+            <Close style={{ fontSize: 24 }} />
+          </Styled.CloseIcon>
         </Styled.Subject>
         <Styled.Form onSubmit={handleSubmit}>
           <Styled.Input

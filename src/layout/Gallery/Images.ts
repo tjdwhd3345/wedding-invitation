@@ -50,16 +50,16 @@ const images = [
     height: 480,
   },
   {
-    alt: "image07",
-    source: image07,
-    width: 320,
-    height: 480,
-  },
-  {
     alt: "image08",
     source: image08,
     width: 480,
     height: 320,
+  },
+  {
+    alt: "image07",
+    source: image07,
+    width: 320,
+    height: 480,
   },
   {
     alt: "image09",

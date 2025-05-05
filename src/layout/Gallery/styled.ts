@@ -12,7 +12,6 @@ export const ContentsWrap = styled.div`
 export const ImageMoreWrap = styled.div`
   position: relative;
   width: 100%;
-
   overflow: hidden;
 `;
 
@@ -35,5 +34,8 @@ export const PlusButton = styled.div`
 `;
 
 export const GalleryContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, minmax(88px, auto));
+  grid-gap: 6px;
   width: 100%;
 `;

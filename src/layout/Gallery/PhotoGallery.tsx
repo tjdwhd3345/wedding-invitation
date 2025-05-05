@@ -1,25 +1,30 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
+import { useState } from "react";
 import images from "@/layout/Gallery/Images.ts";
-import "./PhotoGallery.css";
 import * as Styled from "./styled";
+import Di_Gallery from "./dialog/Di_Gallery";
 
 const PhotoGallery = () => {
+  const [imageShow, setImageShow] = useState(false);
+  const [imageId, setImageId] = useState(0);
+
   return (
     <Styled.GalleryContainer>
-      <Swiper modules={[Navigation]} spaceBetween={30} navigation className="gallery" style={{}}>
-        {images.map((image, index) => (
-          <SwiperSlide key={index}>
-            <img
-              src={image.source}
-              alt={`Image ${index + 1}`}
-              style={{ width: "100%", height: "60vh", objectFit: "contain" }}
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      {images.map((image, index) => (
+        <div
+          key={index}
+          style={{ display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer" }}
+          onClick={() => {
+            setImageShow(true);
+            setImageId(index);
+          }}>
+          <img
+            src={image.source}
+            alt={`Image ${index + 1}`}
+            style={{ width: "100%", height: "100%", objectFit: "cover" }}
+          />
+        </div>
+      ))}
+      {imageShow && <Di_Gallery index={imageId} closeHandler={() => setImageShow(false)} />}
     </Styled.GalleryContainer>
   );
 };

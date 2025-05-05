@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Firebase } from "@/components/Firebase";
 import { Comment } from "@/components/Firebase";
 import { formatDate } from "../function.ts";
+import Close from "@/assets/icons/close.svg?react";
 import * as Styled from "./styled.ts";
 import Delete from "./delete/Delete.tsx";
 
@@ -41,7 +42,9 @@ const Comments = (props: Props) => {
       <Styled.Background />
       <Styled.Subject>
         방명록
-        <Styled.CloseIcon onClick={closeHandler}>X</Styled.CloseIcon>
+        <Styled.CloseIcon onClick={closeHandler}>
+          <Close fontSize={24} />
+        </Styled.CloseIcon>
       </Styled.Subject>
       <Styled.Container>
         {comments.length > 0 ? (
@@ -56,7 +59,7 @@ const Comments = (props: Props) => {
                       setShowDelete(true);
                       setDeleteComment(comment);
                     }}>
-                    X
+                    <Close fontSize={12} />
                   </Styled.DeleteIcon>
                 </Styled.Delete>
               </Styled.Title>

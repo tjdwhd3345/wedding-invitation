@@ -17,7 +17,8 @@ const AccountWrap = (props: IAccountProps) => {
   const { name, relation, bank, account, kakaopayAccount, tossAccount } = props.account;
   const handleCopy = () => {
     if (navigator.clipboard) {
-      navigator.clipboard.writeText(account).then(
+      const text = account.replace(/-/g, "");
+      navigator.clipboard.writeText(text).then(
         () => alert("계좌번호가 복사되었습니다.😉😉"),
         () => alert("계좌번호 복사에 실패했습니다.🥲🥲"),
       );
