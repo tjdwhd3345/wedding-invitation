@@ -13,6 +13,16 @@ export const Container = styled.div`
   flex-direction: column;
 `;
 
+export const Wrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0px 0px 6px 4px rgba(0, 0, 0, 25%);
+`;
+
 export const Background = styled.div`
   position: absolute;
   z-index: -1;
@@ -31,7 +41,6 @@ export const GalleryNavbar = styled.div`
 
 export const GalleryContainer = styled.div`
   width: 100%;
-  max-width: 480px;
   background-color: #fff;
   padding: 8px;
 `;
